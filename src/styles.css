@@ -1,1 +1,221 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and Global Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #121212;
+  color: #fff;
+  overflow-x: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Full-screen Hero Section */
+.hero {
+  height: 100vh;
+  background: linear-gradient(135deg, #6200ea, #3700b3);
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+@keyframes gradientAnimation {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+.hero h1 {
+  font-size: 60px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.7);
+  animation: textGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes textGlow {
+  0% {
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.7);
+  }
+  50% {
+      text-shadow: 0 0 30px rgba(98, 0, 234, 1), 0 0 60px rgba(98, 0, 234, 1);
+  }
+  100% {
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.7);
+  }
+}
+
+.hero p {
+  font-size: 24px;
+  font-weight: 300;
+  margin: 20px 0;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+}
+
+.cta {
+  padding: 12px 28px;
+  background-color: #bb86fc;
+  color: white;
+  font-size: 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cta:hover {
+  background-color: #3700b3;
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* About Section */
+.about {
+  padding: 60px 30px;
+  background-color: #1f1f1f;
+  text-align: center;
+  border-radius: 16px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
+  transform: translateY(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.about:hover {
+  transform: translateY(-12px);
+}
+
+.about h2 {
+  font-size: 48px;
+  color: #bb86fc;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.about p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #e0e0e0;
+  transition: color 0.3s ease;
+}
+
+.about:hover p {
+  color: #bb86fc;
+}
+
+/* Skills Section */
+.skills {
+  padding: 80px 30px;
+  background-color: #2e2e2e;
+  color: #fff;
+  text-align: center;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  margin: 50px 0;
+  transition: transform 0.5s ease-in-out;
+}
+
+.skills:hover {
+  transform: scale(1.05);
+}
+
+.skills h2 {
+  font-size: 48px;
+  color: #bb86fc;
+  margin-bottom: 30px;
+}
+
+.progress-bars {
+  display: flex;
+  justify-content: space-between;
+}
+
+.progress-bar {
+  height: 12px;
+  background-color: #6200ea;
+  border-radius: 6px;
+  width: 0;
+  transition: width 1s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.progress-bar[data-progress="90%"] {
+  background-color: #bb86fc;
+}
+
+.progress-bar[data-progress="75%"] {
+  background-color: #3700b3;
+}
+
+.progress-bar[data-progress="80%"] {
+  background-color: #6200ea;
+}
+
+/* Contact Section */
+.contact {
+  padding: 80px 30px;
+  background-color: #1f1f1f;
+  text-align: center;
+  color: #fff;
+  border-radius: 16px;
+  margin-bottom: 50px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.contact h2 {
+  font-size: 48px;
+  color: #bb86fc;
+  margin-bottom: 20px;
+}
+
+.contact p {
+  font-size: 18px;
+  color: #e0e0e0;
+}
+
+/* Footer */
+footer {
+  background-color: #1f1f1f;
+  color: #bbb;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 -6px 30px rgba(0, 0, 0, 0.3);
+}
+
+footer p {
+  font-size: 14px;
+  color: #bbb;
+  transition: color 0.3s ease;
+}
+
+footer:hover p {
+  color: #bb86fc;
+}
+
+footer a {
+  color: #bb86fc;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #6200ea;
+}
+
+/* Form Animation */

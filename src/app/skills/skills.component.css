@@ -1,0 +1,59 @@
+/* skills.component.css */
+.skills {
+  padding: 80px 30px;
+  background-color: #2e2e2e;
+  color: #fff;
+  text-align: center;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  margin: 50px 0;
+}
+
+.skills h2 {
+  font-size: 48px;
+  color: #bb86fc;
+  margin-bottom: 30px;
+}
+
+.skill-circles {
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.skill-circle {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: conic-gradient(#6200ea 0% 90%, #444 90% 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.skill-circle span {
+  position: absolute;
+  font-size: 20px;
+}
+
+.skill-circle-angular {
+  background: conic-gradient(#6200ea 0% 76%, #444 76% 100%);
+}
+
+.skill-circle-typescript {
+  background: conic-gradient(#007acc 0% 75%, #444 75% 100%);
+}
+
+.skill-circle-css {
+  background: conic-gradient(#264de4 0% 71%, #444 71% 100%);
+}
+
+.skill-circle-dotnet {
+  background: conic-gradient(#5c2d91 0% 77%, #444 77% 100%);
+}

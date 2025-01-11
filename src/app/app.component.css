@@ -1,0 +1,231 @@
+/* app.component.css */
+
+/* Light Theme */
+body {
+    background-color: #ffffff;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Theme */
+body.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+
+/* Global variables for theme colors */
+:root {
+    --primary-color: #6200ea;
+    --secondary-color: #bb86fc;
+    --background-color: #f4f4f4;
+    --primary-dark: #1e1e1e;
+}
+
+/* Dark theme overrides */
+body.dark-theme {
+    --primary-color: #bb86fc;
+    --secondary-color: #6200ea;
+    --background-color: #121212;
+    --primary-dark: #333333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+header.dark-theme {
+    background-color: var(--primary-dark);
+}
+
+button.theme-toggle {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button.theme-toggle:hover {
+    background-color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+    opacity: 1; /* Hero section is visible from the start */
+    transform: translateY(0); /* No transform needed */
+    transition: none; /* No transition effect needed for the hero section */
+    background-color: #6200ea; /* Hero background color */
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero .hero-content h1 {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.hero .hero-content p {
+    font-size: 1.2em;
+}
+
+.hero .cta {
+    background-color: #bb86fc;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.hero .cta:hover {
+    background-color: #6200ea;
+}
+
+/* Section */
+.section {
+    opacity: 0;
+    transform: translateY(50px); /* Start sections off-screen */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    margin: 100px 0;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Make sections visible when they are in view */
+.section.visible {
+    opacity: 1;
+    transform: translateY(0); /* Slide in from below */
+}
+
+/* Contact Section */
+/* Contact Section */
+.contact form {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: var(--background-color);
+    border-radius: 12px;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    background: linear-gradient(135deg, #f4f4f4, #e0e0e0);
+}
+
+/* Form Group Styling */
+.contact .form-group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+/* Input & Textarea Fields */
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 18px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background-color: #f8f8f8;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+    color: #333;
+}
+
+.contact input:focus, .contact textarea:focus {
+    border-color: var(--primary-color);
+    background-color: #e8e8e8;
+    box-shadow: 0 0 10px rgba(98, 0, 234, 0.5); /* Soft glow effect */
+    outline: none;
+}
+
+/* Label Styling */
+.contact label {
+    font-weight: 600;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Textarea Styling */
+.contact textarea {
+    min-height: 150px;
+    resize: vertical;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Hover Effects for Fields */
+.contact input:hover, .contact textarea:hover {
+    border-color: var(--primary-color);
+    background-color: #f0f0f0;
+}
+
+.contact input:focus::placeholder, .contact textarea:focus::placeholder {
+    color: transparent;  /* Hide placeholder text when focused */
+}
+
+/* Button Styling */
+.contact button {
+    padding: 16px 35px;
+    font-size: 18px;
+    color: white;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease-in-out;
+    transform: scale(1);
+}
+
+.contact button:hover {
+    background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+}
+
+.contact button:active {
+    transform: scale(1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact button:disabled {
+    background: linear-gradient(45deg, #ccc, #bbb);
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Add some animation when form is loaded */
+.contact form {
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Keyframe for form fade-in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Smooth focus transition */
+.contact input, .contact textarea {
+    transition: border-color 0.4s ease, background-color 0.4s ease, box-shadow 0.4s ease;
+}

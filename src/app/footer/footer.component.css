@@ -1,0 +1,42 @@
+footer {
+  background-color: #121212;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+footer .social-links {
+  display: flex;
+  justify-content: center; /* Center the links horizontally */
+  gap: 20px;  /* Add space between the links */
+}
+
+footer .social-link {
+  color: #bb86fc;
+  text-decoration: none;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;  /* Keep logo and text in a vertical stack */
+  align-items: center;
+  justify-content: center;
+}
+
+footer .social-icon {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 5px;  /* Space between icon and text */
+  transition: transform 0.3s ease;
+}
+
+footer .social-link:hover .social-icon {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+footer .social-link:hover {
+  color: #6200ea;
+}
+
+footer p {
+  font-size: 12px;
+  margin-top: 5px;
+}
